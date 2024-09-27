@@ -20,6 +20,7 @@ const AdminPage = () => {
           <div className="h-[450px] w-full lg:w-2/3">
             <AttendenceChart />
           </div>
+          <div className="w-full"></div>
         </div>
       </div>
       <div className="w-full lg:w-1/3">r</div>

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 
 export default function UserCard({ type }: { type: string }) {
   return (
-    <Card className="min-w-48">
+    <Card className="min-w-[130px] flex-1 p-4">
       <CardHeader className="pb-2">
         <div className="flex justify-between">
           <Badge>2024/25</Badge>

@@ -1,11 +1,14 @@
 import React from "react";
+import Anouncements from "~/app/_components/Anouncements";
 import { AttendenceChart } from "~/app/_components/AttendenceChart";
 import { Chart } from "~/app/_components/countChart";
+import { EventCalendar } from "~/app/_components/EventCalander";
+import { FinanceChart } from "~/app/_components/FinanceChart";
 import UserCard from "~/app/_components/user-card";
 
 const AdminPage = () => {
   return (
-    <div className="flex flex-col gap-4 p-4 md:flex-row">
+    <div className="flex flex-col gap-8 p-4 md:flex-row">
       <div className="flex w-full flex-col gap-8 lg:w-2/3">
         <div className="flex flex-wrap justify-between gap-4">
           <UserCard type="Student" />
@@ -20,10 +23,15 @@ const AdminPage = () => {
           <div className="h-[450px] w-full lg:w-2/3">
             <AttendenceChart />
           </div>
-          <div className="w-full"></div>
+        </div>
+        <div className="h-[500px] w-full">
+          <FinanceChart />
         </div>
       </div>
-      <div className="w-full lg:w-1/3">r</div>
+      <div className="flex w-full flex-col gap-8 lg:w-1/3">
+        <EventCalendar />
+        <Anouncements />
+      </div>
     </div>
   );
 };

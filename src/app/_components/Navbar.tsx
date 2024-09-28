@@ -28,8 +28,7 @@ const NavBar = () => {
             Admin
           </span>
         </div>
-
-        <Icons.user className="rounded-full bg-white" />
+        <Icons.user className="rounded-full bg-white" />t
       </div>
     </div>
   );

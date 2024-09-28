@@ -53,7 +53,10 @@ export function AttendenceChart() {
         </CardDescription>
       </CardHeader>
       <CardContent className="pb-0">
-        <ChartContainer className="max-h-[300px]" config={chartConfig}>
+        <ChartContainer
+          className="aspect-auto h-[310px] w-full"
+          config={chartConfig}
+        >
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis

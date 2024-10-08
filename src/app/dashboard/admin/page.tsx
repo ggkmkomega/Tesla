@@ -1,7 +1,7 @@
 import React from "react";
 import Anouncements from "~/app/_components/Anouncements";
 import { AttendenceChart } from "~/app/_components/AttendenceChart";
-import { Chart } from "~/app/_components/countChart";
+import { Chart } from "~/app/_components/CountChart";
 import { EventCalendar } from "~/app/_components/EventCalander";
 import { FinanceChart } from "~/app/_components/FinanceChart";
 import UserCard from "~/app/_components/user-card";

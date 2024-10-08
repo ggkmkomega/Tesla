@@ -1,6 +1,8 @@
 // TEMPORARY DATA
 
-export let role = "admin";
+import type { Visibility } from "~/app/_components/Menu";
+
+export const role: Visibility = "admin";
 
 export const teachersData = [
   {

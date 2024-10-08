@@ -3,7 +3,7 @@ import { Icons } from "./Icons";
 
 const NavBar = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between px-4">
       <div className="hidden items-center gap-2 rounded-full px-2 text-xs ring-[1.5px] ring-gray-300 md:flex">
         <Icons.search />
         <input
@@ -28,7 +28,7 @@ const NavBar = () => {
             Admin
           </span>
         </div>
-        <Icons.user className="rounded-full bg-white" />t
+        <Icons.user className="rounded-full bg-white" />
       </div>
     </div>
   );

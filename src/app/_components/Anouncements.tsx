@@ -33,7 +33,7 @@ const Anouncements = () => {
       </div>
       <div className="mt-4 flex flex-col gap-4">
         {anouncements.map((anounce) => (
-          <div className="rounded-md bg-chart-5 p-4" key={anounce.id}>
+          <div className="rounded-md bg-blue-100 p-4" key={anounce.id}>
             <div className="flex items-center justify-between">
               <h2 className="mt-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
                 {anounce.title}

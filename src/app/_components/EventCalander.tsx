@@ -68,14 +68,17 @@ export function EventCalendar() {
       </div>
       <div className="flex flex-col gap-8">
         {events.map((event) => (
-          <div key={event.id}>
-            <div className="flex items-center justify-between border-b">
+          <div
+            key={event.id}
+            className="rounded-md border-2 border-t-4 border-gray-100 border-t-primary"
+          >
+            <div className="flex items-center justify-between pt-4">
               <h2 className="mt-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
                 {event.title}
               </h2>
               <p className="text-muted-foreground">{event.time}</p>
             </div>
-            <p className=":mt-6 leading-7">{event.description}</p>
+            <p className="mt-6 leading-7">{event.description}</p>
           </div>
         ))}
       </div>

@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>
         <TRPCReactProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider forcedTheme="light">{children}</ThemeProvider>
         </TRPCReactProvider>
       </body>
     </html>

@@ -2,12 +2,13 @@ import React from "react";
 import { Icons } from "./Icons";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
+import { role } from "~/lib/data";
 type menuitem = {
   title: string;
   items: item[];
 };
 type item = { icon: LucideIcon; label: string; href: string; visible: Visible };
-type Visibility = "admin" | "teacher" | "student" | "parent";
+export type Visibility = "admin" | "teacher" | "student" | "parent";
 type Visible = Visibility | Visibility[];
 const menuItems: menuitem[] = [
   {
@@ -139,16 +140,20 @@ const Menu = () => {
 const MenuItem = ({ items }: { items: item[] }) => {
   return (
     <>
-      {items.map((i) => (
-        <Link
-          className="flex items-center justify-center gap-4 py-1 lg:justify-start"
-          key={i.label}
-          href={i.href}
-        >
-          <i.icon />
-          <span className="hidden lg:block">{i.label}</span>
-        </Link>
-      ))}
+      {items.map((i) => {
+        if (i.visible.includes(role)) {
+          return (
+            <Link
+              className="flex items-center justify-center gap-4 py-2 hover:bg-blue-100 md:px-2 lg:justify-start"
+              key={i.label}
+              href={i.href}
+            >
+              <i.icon />
+              <span className="hidden lg:block">{i.label}</span>
+            </Link>
+          );
+        }
+      })}
     </>
   );
 };
